@@ -12,5 +12,9 @@ fi
 
 ln -s "$install_path" "$tmux"
 
+if [[ ! -f "$HOME/.tmux/plugins/tpm" ]]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 echo "Tmux configuration is installed successfully on $install_path";
+
